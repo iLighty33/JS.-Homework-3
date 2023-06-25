@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS. Домашняя работа №3</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <script>
+        var myContacts = ['Номер: +7(999)999-99-99', 'Эл.почта: example@gmail.com', 
+        'Адрес: г.Разработчик, ул. Подвальная, д.5'];
+
+        generateFooter(myContacts, 'RMQ1989', 'black', 'gray');
+
+        function generateFooter(contacts, title, bgcolor, fontcolor) {
+            let temp = '';
+            for(var el of contacts) {
+                temp += el + '<br>';
+            }
+            document.write(
+                `<footer style="background-color: ${bgcolor};">
+                    <div class="leftFoot">
+                        <p style="color: ${fontcolor};">${temp}</p>
+                    </div>
+                    <div class ="rightFoot">
+                        <h4 style="color: ${fontcolor};">${title} &copy2023 г.</h4>
+                    </div>
+                </footer>`
+            );
+        }
+
+    </script>
+</body>
+</html>
